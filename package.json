@@ -1,0 +1,25 @@
+{
+  "name": "sensehat-react",
+  "version": "1.0.0",
+  "description": "Dashboard for SenseHat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/farminf/sensehat-react.git"
+  },
+  "keywords": [
+    "SenseHat",
+    "reactjs",
+    "bootstrap",
+    "dashboard"
+  ],
+  "author": "IoTGuy <iotdemos16@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/farminf/sensehat-react/issues"
+  },
+  "homepage": "https://github.com/farminf/sensehat-react#readme"
+}
