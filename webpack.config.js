@@ -16,10 +16,29 @@ module.exports = {
   module: {
     loaders: [
       {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"},
-      {test: /\.(jpe?g|png|gif|svg)$/i,
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
         loaders: [
-        'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
-        'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            query: {
+              progressive: true,
+              pngquant: {
+                quality: '65-90',
+                speed: 4
+              },
+              optipng: {
+                optimizationLevel: 4,
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+              mozjpeg: {
+                progressive: true,
+              }
+            }
+          }
         ]
       }
     ]
