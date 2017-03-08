@@ -3,8 +3,8 @@ var PropTypes = React.PropTypes;
 
 function WidgetWrapper (props) {
   return (
-    <div className='col-sm-4'>
-      {props.children}
+    <div className='col-sm-4 '>
+      	{props.children}
     </div>
   )
 }
