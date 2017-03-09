@@ -18,7 +18,7 @@ var AmbientContainer = require('../containers/AmbientContainer');
 var routes = (
 	<Router history={hashHistory}>
 		<Route path='/' component={Main} >
- 			<IndexRoute component={Ambient} />
+ 			<IndexRoute component={AmbientContainer} />
  			<Route path='ambient' header='Ambient' component={AmbientContainer} />
  			<Route path='control' header='Control' component={Control} />
       		<Route path='chart' header='Chart' component={Chart} />

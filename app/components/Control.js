@@ -11,7 +11,7 @@ var Control = React.createClass({
 	render: function(){
 		return(
 			<MainContainer>
-				<PanelWrapper header='SenseHat LED Board'>
+				<PanelWrapper header='SenseHat LED Color'>
 					<SwitchOnOff button_label='Clear' button_type='btn btn-lg btn-default btn-block'/>
 					<SwitchOnOff button_label='Red' button_type='btn btn-lg btn-danger btn-block'/>
 					<SwitchOnOff button_label='Green' button_type='btn btn-lg btn-success btn-block'/>
@@ -20,8 +20,8 @@ var Control = React.createClass({
 				<ImageWrapper>
 					<img src={sensehatImage} className="img-responsive center-block" />
 				</ImageWrapper>
-				<PanelWrapper header='Write on LED'>
-				<InputWidget placeholder='write a word...' button_name='Send' />
+				<PanelWrapper header='Send to LED'>
+				<InputWidget placeholder='write a message...' button_name='Send' />
 				</PanelWrapper>
 			</MainContainer>
 		)

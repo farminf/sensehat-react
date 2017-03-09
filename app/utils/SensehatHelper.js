@@ -3,11 +3,14 @@ var axiosAPI = require('./axiosAPI');
 var helpers = { 
 	getAmbientValues: function(){
 		return axiosAPI.get('/ambient')
-				.catch(function (err) {console.warn('Error in getPlayersInfo: ', err)})
+				.catch(function (err) {console.warn('Error in getAmbientValues: ', err)})
 
 	},
-	setColorRGB: function(color){
+	setLEDRGB: function(color){
 
+	},
+	setLEDMessage: function(message){
+		
 	}
 
 }

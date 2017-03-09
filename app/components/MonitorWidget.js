@@ -1,5 +1,7 @@
 var React = require('react');
 var transparentBg = require('../styles').transparentBg;
+var FontAwesomeImage = require('./FontAwesomeImage')
+
 
 function MonitorWidget(props){
 	return(
@@ -9,6 +11,7 @@ function MonitorWidget(props){
 		    		<h3 className="panel-title">{props.panel_tile}</h3>
 		  		</div>
 	  			<div className="panel-body">
+	  				<FontAwesomeImage panel_icon={props.panel_icon}/>
 		    		{props.panel_content}
 		  		</div>
 			</div>		
