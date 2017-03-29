@@ -13,6 +13,9 @@ var Ambient = require('../components/Ambient');
 var Control = require('../components/Control');
 var Chart = require('../components/Chart');
 var AmbientContainer = require('../containers/AmbientContainer');
+var ControlContainer = require('../containers/ControlContainer');
+var ChartContainer = require('../containers/ChartContainer');
+
 
 
 var routes = (
@@ -20,8 +23,8 @@ var routes = (
 		<Route path='/' component={Main} >
  			<IndexRoute component={AmbientContainer} />
  			<Route path='ambient' header='Ambient' component={AmbientContainer} />
- 			<Route path='control' header='Control' component={Control} />
-      		<Route path='chart' header='Chart' component={Chart} />
+ 			<Route path='control' header='Control' component={ControlContainer} />
+      		<Route path='chart' header='Chart' component={ChartContainer} />
 		</Route>
 	</Router>
 );

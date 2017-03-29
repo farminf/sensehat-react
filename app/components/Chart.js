@@ -7,7 +7,7 @@ var MainContainer = require('./MainContainer')
 
 
 var Chart = React.createClass({
-	render: function(){
+	render: function(props){
 		return(
 			<MainContainer>
 				<ChartWidget/>

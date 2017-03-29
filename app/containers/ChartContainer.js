@@ -1,8 +1,8 @@
 var React = require('react');
-var Control = require('../components/Control');
+var Chart = require('../components/Chart');
 var SensehatHelper = require('../utils/SensehatHelper')
 
-var ControlContainer = React.createClass({
+var ChartContainer = React.createClass({
 	getInitialState: function () {
 		return {
 		  isLoading: true 
@@ -13,11 +13,11 @@ var ControlContainer = React.createClass({
 	},
 	render: function() {
 		return (
-			<Control
+			<Chart
 				isLoading={this.state.isLoading}
 				 />
 		);
 	}
 });
 
-module.exports = ControlContainer;
+module.exports = ChartContainer;

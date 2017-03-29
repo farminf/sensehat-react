@@ -1,5 +1,8 @@
 var React = require('react')
 var RTChart = require('react-rt-chart')
+var React = require('react');
+var Chart = require('react-d3-core').Chart;
+var LineChart = require('react-d3-basic').LineChart;
 
 var ChartWidget = React.createClass({
 
@@ -19,12 +22,12 @@ var ChartWidget = React.createClass({
 	render: function(){
 		var data = {
 				      date: new Date(),
-				      Car: this.getRandomInt(10,20),
-				      Bus: this.getRandomInt(50,60)
+				      temp: this.getRandomInt(10,20),
+				      hum: this.getRandomInt(50,60)
 				    };
 		return(
 			<RTChart
-            fields={['Car','Bus']}
+            fields={['temp','hum']}
             data={data} />
 		)
 	}

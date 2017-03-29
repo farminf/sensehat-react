@@ -7,10 +7,14 @@ var helpers = {
 
 	},
 	setLEDRGB: function(color){
-
+		return axiosAPI.get('/led/' + color)
+				.catch(function (err) {console.warn('Error in setLEDRGB: ', err)})
 	},
 	setLEDMessage: function(message){
-		
+		return axiosAPI.post('/led' , {
+					    "message": message
+					  })
+				.catch(function (err) {console.warn('Error in setLEDRGB: ', err)})
 	}
 
 }

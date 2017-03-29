@@ -21,7 +21,7 @@ var Control = React.createClass({
 					<img src={sensehatImage} className="img-responsive center-block" />
 				</ImageWrapper>
 				<PanelWrapper header='Send to LED'>
-				<InputWidget placeholder='write a message...' button_name='Send' />
+					<InputWidget placeholder='write a message...' button_name='Send' />
 				</PanelWrapper>
 			</MainContainer>
 		)
