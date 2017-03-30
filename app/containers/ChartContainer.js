@@ -1,5 +1,5 @@
 var React = require('react');
-var Chart = require('../components/Chart');
+var MyChart = require('../components/MyChart');
 var SensehatHelper = require('../utils/SensehatHelper')
 
 var ChartContainer = React.createClass({
@@ -13,9 +13,11 @@ var ChartContainer = React.createClass({
 	},
 	render: function() {
 		return (
-			<Chart
+
+			<MyChart
 				isLoading={this.state.isLoading}
-				 />
+			/>
+
 		);
 	}
 });

@@ -9,9 +9,6 @@ var IndexRoute = ReactRouter.IndexRoute;
 
 
 var Main = require('../components/Main');
-var Ambient = require('../components/Ambient');
-var Control = require('../components/Control');
-var Chart = require('../components/Chart');
 var AmbientContainer = require('../containers/AmbientContainer');
 var ControlContainer = require('../containers/ControlContainer');
 var ChartContainer = require('../containers/ChartContainer');
