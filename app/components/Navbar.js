@@ -1,6 +1,8 @@
 var React = require('react');
 var ReactRouter = require('react-router');
 var textcolorblack = require('../styles').textcolorblack;
+var bloglink = require('../styles').bloglink;
+
 
 var Link = ReactRouter.Link;
 
@@ -35,7 +37,7 @@ function Navbar(){
                 </li>
               </ul>
             <ul className="nav navbar-nav navbar-right">
-                <li><a target="_blank" href="https://iotdemos.wordpress.com">Blog</a></li>
+                <li><a style={bloglink} target="_blank" href="https://iotdemos.wordpress.com">Blog</a></li>
               </ul>
             </div>
             </div>

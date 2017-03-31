@@ -4,7 +4,7 @@ var transparentBg = require('../styles').transparentBg;
 
 function ImageWrapper (props) {
   return (
-    <div className='col-sm-4 panel panel-default text-center'>    
+    <div className='col-sm-3 panel panel-default text-center'>    
       {props.children}
     </div>
   )
