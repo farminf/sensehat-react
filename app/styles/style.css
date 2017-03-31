@@ -1,0 +1,34 @@
+.navbar .navbar-collapse {
+    text-align: center;
+    font-size: 1.5em;
+}
+.navbar .navbar-nav {
+
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+.circle {
+    border:solid grey;
+    border-radius: 250px;
+    color: grey;
+    height: 250px;
+    font-weight: bold;
+    width: 300px;
+    display: table;
+    margin: 10px auto;
+}
+.circle p {
+    display: table-cell;
+    vertical-align: middle;
+}
+.fa-thermometer{
+    color : orange ;
+}
+.fa-tint{
+    color : blue ;
+}
+.fa-tachometer{
+    color : red ;
+}

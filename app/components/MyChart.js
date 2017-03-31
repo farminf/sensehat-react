@@ -17,13 +17,13 @@ var MyChart = React.createClass({
 			
 			<MainContainer>
 				<ChartFrameContainer>
-					<D3chartWidget sensor='temperature'/>
+					<D3chartWidget sensor='temperature' color='orange'/>
 				</ChartFrameContainer>
 				<ChartFrameContainer>
-					<D3chartWidget sensor='humidity'/>
+					<D3chartWidget sensor='humidity' color='blue'/>
 				</ChartFrameContainer>
 				<ChartFrameContainer>
-					<D3chartWidget sensor='pressure'/>
+					<D3chartWidget sensor='pressure' color='red'/>
 				</ChartFrameContainer>
 			</MainContainer>
 		)

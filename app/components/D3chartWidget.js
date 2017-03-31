@@ -51,7 +51,7 @@ var D3chartWidget = React.createClass({
 	      {
 	        field: 'BMI',
 	        name: this.props.sensor,
-	        color: '#ff7f0e'
+	        color: this.props.color
 	        
 	      }
 	    ]

@@ -1,5 +1,7 @@
 var React = require('react');
 var ReactRouter = require('react-router');
+var textcolorblack = require('../styles').textcolorblack;
+
 var Link = ReactRouter.Link;
 
 
@@ -18,7 +20,7 @@ function Navbar(){
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-              <a className="navbar-brand" >SenseHat Dashboard</a>
+              <p className="navbar-brand" style={textcolorblack} >SenseHat Dashboard</p>
             </div>
             <div id="bs-example-navbar-collapse-1" className="collapse navbar-collapse" >
               <ul className="nav navbar-nav">

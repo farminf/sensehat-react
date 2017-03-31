@@ -1,20 +1,28 @@
 var React = require('react');
 var transparentBg = require('../styles').transparentBg;
-var FontAwesomeImage = require('./FontAwesomeImage')
+var FontAwesome = require('react-fontawesome');
+
 
 
 function MonitorWidget(props){
+	var inverse = true
 	return(
 		<div className="jumbotron col-sm-12 text-center" style={transparentBg}>
-  			<div className="panel panel-default ">
-		  		<div className="panel-heading">
-		    		<h3 className="panel-title">{props.panel_tile}</h3>
-		  		</div>
-	  			<div className="panel-body">
-	  				<FontAwesomeImage panel_icon={props.panel_icon}/>
-		    		{props.panel_content}
-		  		</div>
-			</div>		
+
+	  				
+		            <div className="circle">
+			  				
+			  			<p>
+			  				<FontAwesome 
+			  					name={props.panel_icon} 
+			  					size='4x'
+			  					 />
+			  					
+				    		<h2>{props.panel_content} {props.unit}</h2>
+				    	</p>
+
+		            </div>
+					        
 		</div>
 	)
 }
