@@ -6,6 +6,7 @@ var FontAwesome = require('react-fontawesome');
 
 function MonitorWidget(props){
 	var inverse = true
+	var value = props.panel_content.toFixed(1);
 	return(
 		<div className="jumbotron col-sm-12 text-center" style={transparentBg}>
 
@@ -18,7 +19,7 @@ function MonitorWidget(props){
 			  					size='4x'
 			  					 />
 			  					
-				    		<h2>{props.panel_content} {props.unit}</h2>
+				    		<h2>{value} {props.unit}</h2>
 				    	</p>
 
 		            </div>

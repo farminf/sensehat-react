@@ -1,26 +1,49 @@
 var React = require('react')
 var LineChart = require('react-d3-basic').LineChart;
 var core = require('react-d3-core');
+var SensehatHelper = require('../utils/SensehatHelper')
+
 
 
 var D3chartWidget = React.createClass({
  
 	updateChart: function(){
-		console.log("ds")
-		this.setState({
-			chartData : this.state.chartData.concat([{
-											    BMI: this.getRandomInt(10,20),
-											    date: new Date()
-											  }])
-		})
+		SensehatHelper.getAmbientValues()
+	    	.then(function(result){
+	    		if(this.props.sensor == 'temperature'){
+	    			this.setState({
+						chartData : this.state.chartData.concat([{
+														    sensor: result.data.temperature,
+														    date: new Date()
+														  }])
+					})
+	    		}else if (this.props.sensor == 'humidity'){
+	    			this.setState({
+						chartData : this.state.chartData.concat([{
+														    sensor: result.data.humidity,
+														    date: new Date()
+														  }])
+					})
+	    		}else{
+	    			this.setState({
+						chartData : this.state.chartData.concat([{
+														    sensor: result.data.pressure,
+														    date: new Date()
+														  }])
+					})
+	    		}
+	    		
+	    	}.bind(this))
+		
 	},
 	getRandomInt: function(min, max) {
     	return Math.floor(Math.random() * (max - min + 1)) + min;
 	},
 	getInitialState : function() {
-		console.log(this.props.sensor)
     	return {
-    		chartData : []
+    		chartData : [
+    						
+    					]
     	};
   	},
 	componentDidMount: function ()  {
@@ -34,14 +57,13 @@ var D3chartWidget = React.createClass({
 
 		var width = 600
 	    var height = 300
-	    var margins = {left: 20, right: 20, top: 20, bottom: 60}
+	    var margins = {left: 50, right: 20, top: 20, bottom: 60}
 	    var title = "Title"
 	    var parseDate = d3.time.format("%YM%m").parse;
 	    xDomain = d3.extent(this.state.chartData, function(d){ return x(d) })
 	    xRange = [0, width - margins.left - margins.right]
 	    xScale = 'time',
 	    xLabel = "Time";
-	    //xAxis= {{tickValues: this.state.xScale.ticks(d3.time.day, 2), tickFormat: d3.time.format("%m/%d")}}
 
 	    // chart series,
 	    // field: is what field your data want to be selected
@@ -49,7 +71,7 @@ var D3chartWidget = React.createClass({
 	    // color: what color is the line
 	    chartSeries = [
 	      {
-	        field: 'BMI',
+	        field: 'sensor',
 	        name: this.props.sensor,
 	        color: this.props.color
 	        
@@ -58,11 +80,6 @@ var D3chartWidget = React.createClass({
 	    // your x accessor
 	    x = function(d) {
 	    	return d.date;
-	    	// date = d.date;
-	    	// return date.toISOString();
-	    	//return d3.time.format("%YM%m").parse;
-	    	// console.log(new Date().toISOString())
-	    	// return d.date;
 	    }
 		
 		return(

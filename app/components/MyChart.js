@@ -11,24 +11,23 @@ var MainContainer = require('./MainContainer')
 
 
 
-var MyChart = React.createClass({
-	render: function(props){
+function MyChart (props){
 		return(
 			
 			<MainContainer>
 				<ChartFrameContainer>
-					<D3chartWidget sensor='temperature' color='orange'/>
+					<D3chartWidget sensor='temperature' color='orange' sensor_value={props.temperature}/>
 				</ChartFrameContainer>
 				<ChartFrameContainer>
-					<D3chartWidget sensor='humidity' color='blue'/>
+					<D3chartWidget sensor='humidity' color='blue' sensor_value={props.humidity}/>
 				</ChartFrameContainer>
 				<ChartFrameContainer>
-					<D3chartWidget sensor='pressure' color='red'/>
+					<D3chartWidget sensor='pressure' color='red' sensor_value={props.pressure}/>
 				</ChartFrameContainer>
 			</MainContainer>
 		)
 	}
 
-});
+
 
 module.exports = MyChart;
