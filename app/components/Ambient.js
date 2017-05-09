@@ -1,6 +1,6 @@
 var React = require('react');
 var MonitorWidget = require('./MonitorWidget')
-var Widgetwrapper = require('./Widgetwrapper')
+var Widgetwrapper = require('./WidgetWrapper')
 var MainContainer = require('./MainContainer')
 
 function Ambient(props){

@@ -1,11 +1,15 @@
-FROM node:latest
+FROM node:6.10
 
-COPY . /src
-WORKDIR /src
+RUN mkdir /sensehat-react-app
+COPY . /sensehat-react-app
+WORKDIR /sensehat-react-app
+
+RUN npm config set proxy http://192.168.201.3:3128
+RUN npm config set https-proxy http://192.168.201.3:3128
 
 RUN npm install
 
 
 EXPOSE 8080
 
-CMD [ "node", "/src/app/index.js" ]
+CMD [ "npm", "start" ]
